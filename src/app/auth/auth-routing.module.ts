@@ -6,12 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
 
 const routes: Routes = [
-  {path: '', component:AuthComponent,
-  children:[
+  {path: '', component:AuthComponent},
   //AUTH
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
-] },
   //{path: '', redirectTo:'/dashboard/',pathMatch:'full'},
   //{path: '**', component:NotFoundComponent},
   

@@ -12,8 +12,7 @@ export class ProductComponent {
   }
 
   ngOnInit(): void{
-
-  }
+    this.getProducts
 
   getProducts(){
     this.httpClient.get('https://api.escuelajs.co/api/v1/products');

@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
+import { AppComponent } from '../app.component';
 
 const routes: Routes = [
   //rutas protegidas
@@ -12,16 +13,18 @@ const routes: Routes = [
    children:[
     {path: 'dashboard', component:DashboardComponent},
     {path: 'category', component:CategoryComponent},
-    {path: 'product', component:ProductComponent},
+    {path: 'product', component:ProductComponent}
 ] },
-  //{path: '**', component:NotFoundComponent},
-
 ];
 
 @NgModule({
   declarations: [],
   imports: [
     RouterModule.forChild(routes),
-  ]
+  ],
+   exports: [
+    RouterModule
+   ]
 })
+
 export class PagesRoutingModule { }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -12,9 +12,12 @@ export class ProductComponent {
   }
 
   ngOnInit(): void{
-    this.getProducts
-
+    this.getProducts();
+  }
   getProducts(){
-    this.httpClient.get('https://api.escuelajs.co/api/v1/products');
+    const response = this.httpClient.get('https://api.escuelajs.co/api/v1/products').subscribe
+    (response => {console.log(response);
+    }
+    );
   }
 }
